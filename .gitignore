@@ -1,0 +1,53 @@
+# === macOS ===
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icones sur dossiers personnalisés
+Icon?
+._*
+
+# Fichiers temporaires créés par Spotlight
+.Spotlight-V100
+.Trashes
+
+# === Linux ===
+*~
+.nfs*
+
+# === Node.js (si tu ajoutes Node plus tard) ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# === VS Code ===
+.vscode/
+*.code-workspace
+
+# === JetBrains IDEs (WebStorm, PhpStorm, IntelliJ, etc.) ===
+.idea/
+*.iml
+*.iws
+out/
+
+# === Logs ===
+logs/
+*.log
+*.tmp
+
+# === Caches divers ===
+.cache/
+dist/
+tmp/
+temp/
+
+# === Systèmes de fichiers réseau / montés ===
+.mnt/
+Volumes/
+
+# === Divers fichiers inutiles ===
+Thumbs.db
+ehthumbs.db
+Desktop.ini
