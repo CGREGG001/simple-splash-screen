@@ -6,7 +6,6 @@
 [![CSS3](https://img.shields.io/badge/CSS-3-1572B6?logo=css3&logoColor=white)](#)
 [![JavaScript](https://img.shields.io/badge/JS-ES6-F7DF1E?logo=javascript&logoColor=white)](#)
 
-
 ## Description
 
 Ce projet met en œuvre un **écran d’introduction (Splash Screen)** pour un site web. Il s'agit d'une page de chargement initiale qui affiche un **logo animé** avant de laisser place au **contenu principal du site** via un **effet de fondu progressif** (_fade transition_).
@@ -41,11 +40,17 @@ Ce type d'écran améliore l'expérience utilisateur en donnant une première im
 ```bash
 .
 ├── css
+│   ├── animations.css
+│   ├── base.css
+│   ├── main.css
+│   └── splash-screen.css
 ├── favicon.ico
 ├── index.html
 ├── LICENSE
 ├── README.md
 └── scripts
+    └── disable-scroll-after-splash.js
+
 ```
 
 ## Fonctionnement
