@@ -1,0 +1,110 @@
+/* === Variables === */
+:root {
+  --background-dark: #151218;
+  --square-size: 140px;
+  --main-purple: #4e27cf;
+  --second-purple: #8668ec;
+  --third-purple: #7027d5;
+}
+
+/* === Splash Screen Container === */
+.splash-screen {
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  inset: 0; /* inset = top, bottom, left, right = 0 : prend tout l'écran*/
+
+  background-color: var(--background-dark);
+
+  animation: fadeSplashScreen 1s ease-out forwards;
+  animation-delay: 4s;
+}
+
+/* === Logo Container === */
+.splash-logo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 80%;
+  height: 80%;
+
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards, fadeOut 1s ease-out forwards;
+  animation-delay: 0s, 4s;
+}
+
+/* === Title Animation === */
+.title {
+  position: absolute;
+  z-index: 9;
+
+  font-family: "PT Mono", sans-serif;
+  font-weight: 100;
+  font-size: 60px;
+  color: white;
+  text-align: center;
+
+  animation: fadeIn 3s ease-out forwards;
+
+  & .letter-c,
+  & .letter-g {
+    display: inline-block;
+    line-height: 1;
+    transform: scaleX(1);
+    transition-delay: 0.4s;
+  }
+
+  & .letter-c {
+    margin-right: -28px; /* rapprochement des lettres */
+    animation: rotateLetterC 1s ease-in-out forwards;
+    animation-delay: 1s;
+    transition-delay: 0.4s;
+  }
+}
+
+.square {
+  /*informe le navigateur qu’une transformation arrive, ce qui améliore la fluidité de l’animation*/
+  will-change: transform;
+  position: absolute;
+  width: var(--square-size);
+  height: var(--square-size);
+  transition: transform 2s ease-in-out;
+  border-radius: 15px;
+}
+
+.square1 {
+  z-index: 3;
+  background: var(--main-purple);
+  background: linear-gradient(
+    100deg,
+    rgba(78, 39, 207, 1),
+    rgba(43, 21, 113, 1) 100%
+  );
+  transform: rotate(45deg); /*carré sur pointe*/
+  box-shadow: 0 8px 30px rgba(78, 39, 207, 0.3);
+}
+
+/* === Square Animation === */
+.square2 {
+  z-index: 2;
+  background-color: var(--second-purple);
+  transform: rotate(-45deg); /*-45deg pour décallage par la droite*/
+  animation: rotateSquare2 1s ease-in-out forwards;
+  animation-delay: 1.2s;
+  transition-delay: 0.4s;
+}
+
+.square3 {
+  z-index: 1;
+  background-color: var(--third-purple);
+  transform: rotate(-45deg);
+  animation: rotateSquare3 1s ease-in-out forwards;
+  animation-delay: 1.4s;
+  transition-delay: 0.4s;
+}
